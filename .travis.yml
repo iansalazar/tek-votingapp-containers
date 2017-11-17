@@ -1,8 +1,8 @@
 env:
   global:
-  - VOTE_REPO=kurtcrowley/tek-voting-vote
-  - RESULT_REPO=kurtcrowley/tek-voting-result
-  - WORKER_REPO=kurtcrowley/tek-voting-worker
+  - VOTE_REPO=zulyian/tek-voting-vote
+  - RESULT_REPO=zulyian/tek-voting-result
+  - WORKER_REPO=zulyian/tek-voting-worker
   - COMMIT=${TRAVIS_COMMIT::8}
 
 
@@ -42,5 +42,5 @@ jobs:
       - docker push $WORKER_REPO
     - stage: XL RELEASE
       script:
-      - cd xlr
-      - sh deploy_votingapp.sh $XLR_CREDENTIALS $XLR_VOTE_DEPLOY_PATH $VOTE_REPO:travis-$TRAVIS_BUILD_NUMBER
+      - #cd xlr
+      - #sh deploy_votingapp.sh $XLR_CREDENTIALS $XLR_VOTE_DEPLOY_PATH $VOTE_REPO:travis-$TRAVIS_BUILD_NUMBER
