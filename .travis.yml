@@ -42,5 +42,5 @@ jobs:
       - docker push $WORKER_REPO
     - stage: XL RELEASE
       script:
-      - cd xlr
+      - #cd xlr
       - #sh deploy_votingapp.sh $XLR_CREDENTIALS $XLR_VOTE_DEPLOY_PATH $VOTE_REPO:travis-$TRAVIS_BUILD_NUMBER
